@@ -11,7 +11,7 @@ pipeline {
         }
         stage('build') {
             steps {
-                sh '/usr/share/maven/bin/mvn package'
+                sh 'mvn package'
             }
         }
 
@@ -20,10 +20,7 @@ pipeline {
                 junit '**/surefire-reports/*.xml'
             }
         }
-		stage ( 'artifacts') {
-            steps {
-                archiveArtifacts artifacts: '**/target/*.war'
-            }
-		}
-    }    
+		
+		
+    }  
 }    
