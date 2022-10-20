@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'jdk8' }
+    agent { label 'jdk11' }
     
     
     stages {
