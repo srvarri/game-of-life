@@ -21,6 +21,10 @@ pipeline {
             }
         }
 		
-		
+		stage ( 'artifacts') {
+            steps {
+                archiveArtifacts artifacts: '**/*.jar'
+            }
+		}
     }  
 }    
